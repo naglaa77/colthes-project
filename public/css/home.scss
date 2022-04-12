@@ -1,0 +1,96 @@
+@import 'nav.scss';
+.hero-section {
+    width: 100%;
+    height: calc(100vh - 120px); /*120px is height of nav*/
+    background-image: url('../img/header.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .log {
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+    .sub-heading {
+        margin-top: 10px;
+        text-align: center;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 35px;
+        font-weight: 300;
+    }
+}
+
+/****Start product section***/
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    .product-category {
+        padding: 0 10vw;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 40px;
+        text-transform: capitalize;
+    }
+    .product-container {
+        padding: 0 10vw;
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+            display: none; /*hide it from scroll*/
+        }
+        .product-card {
+            flex: 0 0 auto;
+            .product-image {
+                position: relative;
+                width: 100%;
+                height: 350px;
+                overflow: hidden;
+                .discount-tag {
+                    position: absolute;
+                    background-color: #fff;
+                    padding: 5px;
+                    border-radius: 5px;
+                    color: #ff7d7d;
+                    right: 10px;
+                    top: 10px;
+                    text-transform: capitalize;
+                }
+                .product-thumb {
+                    width: 100%;
+                    height: 350px;
+                    object-fit: cover;
+                }
+                .card-btn {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 10px;
+                    width: 90%;
+                    text-transform: capitalize;
+                    border: none;
+                    outline: none;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    transition: 0.5;
+                    cursor: pointer;
+                    opacity: 0;
+                    &:hover {
+                        background-color: #efefef;
+                    }
+                }
+            }
+            &:hover {
+                .card-btn {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/****End  product section***/
