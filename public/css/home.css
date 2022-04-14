@@ -181,6 +181,48 @@ a {
   text-transform: capitalize;
 }
 
+.product .pre-btn,
+.product .nxt-btn {
+  border: navajowhite;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#fff));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.product .pre-btn img,
+.product .nxt-btn img {
+  opacity: .2;
+}
+
+.product .pre-btn:hover img,
+.product .nxt-btn:hover img {
+  opacity: 1;
+}
+
+.product .pre-btn {
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.product .nxt-btn {
+  right: 0;
+}
+
 .product .product-container {
   padding: 0 10vw;
   display: -webkit-box;
@@ -199,6 +241,7 @@ a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  margin-right: 20px;
 }
 
 .product .product-container .product-card .product-image {
@@ -251,6 +294,37 @@ a {
 
 .product .product-container .product-card:hover .card-btn {
   opacity: 1;
+}
+
+.product .product-container .product-card .product-info {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.product .product-container .product-card .product-info .product-brand {
+  text-transform: uppercase;
+}
+
+.product .product-container .product-card .product-info .product-short-des {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+
+.product .product-container .product-card .product-info .price {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.product .product-container .product-card .product-info .actual-price {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
 }
 
 /****End  product section***/
